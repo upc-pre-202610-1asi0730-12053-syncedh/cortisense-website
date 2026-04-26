@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CortiSense | SyncedHealth</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style/styles.css"> 
+</head>
+<body>
+    <div id="contenido-web">
+        <header>
+            <div class="logo">
+                <h2><a href="#"><i class="fa fa-heartbeat"></i> CortiSense</a></h2>
+                <p class="tagline" data-i18n="nav_tagline">Intelligent monitoring for safe well-being</p>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#hero" data-i18n="nav_home">Home</a></li>
+                    <li><a href="#description" data-i18n="nav_desc">Description</a></li>
+                    <li><a href="#goals" data-i18n="nav_goals">Goals</a></li>
+                    <li><a href="#service" data-i18n="nav_plans">Pricing</a></li>
+                    <li><a href="#reviews" data-i18n="nav_reviews">Impact</a></li>
+                    <li><a href="#device" data-i18n="nav_iot">IoT Systems</a></li>
+                    <li><a href="#contact" data-i18n="nav_support">Support</a></li>
+                </ul>
+                <div class="header-actions">
+                    <button class="btn-lang" onclick="toggleLanguage()"><i class="fa fa-globe"></i> <span id="lang-text">ES</span></button>
+                    <a href="#contact" class="btn-login" data-i18n="nav_login">Join Us</a>
+                </div>
+            </nav>
+        </header>
+
+        <section id="hero" class="hero">
+            <div class="hero-content">
+                <div class="badge">
+                    <span data-i18n="hero_badge">Health Matters</span> <i class="fa fa-heart" style="color: #ff6b6b;"></i>
+                </div>
+                <h1 data-i18n="hero_title">Protecting those who <span class="highlight">protect us.</span></h1>
+                <p class="hero-subtitle" data-i18n="hero_subtitle">The first real-time stress and burnout monitoring system for healthcare professionals.</p>
+                
+                <div class="search-container">
+                    <input type="text" placeholder="Search insights or features" id="searchInput">
+                    <button type="button" id="btn-buscar"><i class="fa fa-search"></i></button> 
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="img/doctora.png" alt="Doctor using CortiSense" class="floating-img">
+            </div>
+        </section>
+
+        <section id="description" class="description">
+            <h3 class="title" data-i18n="desc_title"> Start-Up Description</h3>
+            <p data-i18n="desc_text1">
+                SyncedHealth is a health-tech startup founded by engineering students from the Universidad Peruana de Ciencias Aplicadas (UPC). We were born with the objective of improving and optimizing the healthcare system through proper management of medical staff work schedules.
+            </p>
+            <p data-i18n="desc_text2">
+                Through the integration of advanced IoT devices, we monitor critical biomarkers such as cortisol levels and heart rate variability (HRV) to prevent professional burnout. This ensures better performance during working hours and guarantees patient safety.
+            </p>
+            <hr class="separator">
+        </section>
+
+        <section id="goals" class="goals">
+            <h3 class="title" data-i18n="goals_title"> Our Goals</h3>
+            <p data-i18n="goals_text">
+                Our mission is to safeguard healthcare workers' well-being by replacing chronic fatigue with data-driven preventive monitoring. We envision becoming the global standard in occupational health monitoring, where the integration of biotechnology and data intelligence eradicates chronic stress in medical personnel.
+            </p>
+            <ul class="grid">
+                <li class="small" style="background-image: url('img/objetivo1.PNG');"></li>
+                <li class="small" style="background-image: url('img/objetivo2.PNG');"></li>
+            </ul>
+            <hr class="separator">
+        </section>
+
+        <section id="service" class="service-section">
+            <h3 class="title" data-i18n="plans_title">Wellness Plans</h3>
+            <p data-i18n="plans_subtitle" class="section-subtitle-text">Choose the plan that best fits your medical facility or personal needs.</p>
+            <div class="service-grid">
+                <div class="service-card">
+                    <h3 data-i18n="plan_free_name">Resident Plan</h3>
+                    <h2 class="price" data-i18n="plan_free_price">S/ 19 <span>/mo</span></h2>
+                    <p data-i18n="plan_free_desc">Individual monitoring for medical students and residents.</p>
+                    <ul>
+                        <li data-i18n="plan_free_li1"><i class="fa fa-check-circle"></i> 1 CortiSense Wearable</li>
+                        <li data-i18n="plan_free_li2"><i class="fa fa-check-circle"></i> Real-time Cortisol/HRV</li>
+                        <li data-i18n="plan_free_li3"><i class="fa fa-check-circle"></i> Basic Wellness App</li>
+                    </ul>
+                </div>
+                <div class="service-card premium">
+                    <h3 data-i18n="plan_ent_name">Hospital Enterprise</h3>
+                    <h2 class="price" data-i18n="plan_ent_price">Custom</h2>
+                    <p data-i18n="plan_ent_desc">Full management for hospitals and clinical teams.</p>
+                    <ul>
+                        <li data-i18n="plan_ent_li1"><i class="fa fa-star"></i> Unlimited Wearables</li>
+                        <li data-i18n="plan_ent_li2"><i class="fa fa-star"></i> Admin Risk Dashboard</li>
+                        <li data-i18n="plan_ent_li3"><i class="fa fa-star"></i> 24/7 Clinical Support</li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="separator" style="margin-top: 60px;">
+        </section>
+
+        <section id="reviews" class="reviews">
+            <h3 class="title" data-i18n="reviews_title">What our clients say:</h3>
+            <p class="quote" data-i18n="review_1">"The precision of SyncedHealth's wearables is incredible. Knowing my stress levels in real-time helped me avoid total burnout during my shifts."</p>
+            <p class="author" data-i18n="review_author1">— Dr. Ricardo M., ER Surgeon</p>
+            <br>
+            <p class="quote" data-i18n="review_2">"Being able to monitor our medical team's fatigue has reduced clinical errors. We now manage shifts with scientific data, not just intuition."</p>
+            <p class="author" data-i18n="review_author2">— Elena S., Hospital Director</p>
+            <br>
+            <p class="quote" data-i18n="review_3">"We implemented the smartwatches across the ICU. The dashboard tells us exactly who needs a mandatory break before a critical procedure."</p>
+            <p class="author" data-i18n="review_author3">— Jorge L., HR Administrator</p>
+            <hr class="separator">
+        </section>
+
+        <section id="device" class="device">
+            <h3 class="title" data-i18n="device_title"> SyncedHealth I.O.T. Systems </h3>
+            <p data-i18n="device_subtitle" class="section-subtitle-text"> Advanced Wearables at your fingertips </p>
+            <ul class="grid">
+                <li class="small" style="background-image: url('img/smartwatch.PNG');"></li>
+                <li class="small" style="background-image: url('img/smartpatch.PNG');"></li>
+            </ul>
+            <hr class="separator">
+        </section>
+
+        <footer id="contact">
+            <div class="footer-container">
+                <div class="footer-brand">
+                    <h2><i class="fa fa-heartbeat"></i> CortiSense</h2>
+                    <p data-i18n="footer_desc">The first real-time stress and burnout monitoring system for healthcare professionals.</p>
+                </div>
+                <div class="footer-contact">
+                    <h4 data-i18n="footer_contact">Contact Us</h4>
+                    <p><i class="fa fa-envelope-o"></i> hello@syncedhealth.app</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>Copyright © 2026 SyncedHealth. <span data-i18n="footer_rights">All Rights Reserved.</span></p>
+            </div>
+        </footer>
+    </div>
+    <script src="js/scripts.js"></script>
+</body>
+</html>
