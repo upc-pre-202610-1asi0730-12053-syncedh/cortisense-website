@@ -141,3 +141,29 @@ function toggleLanguage() {
     if (searchInput) searchInput.placeholder = currentLanguage === 'en' ? "Search insights or features" : "Buscar funcionalidad o dato";
     document.getElementById('lang-text').innerText = currentLanguage === 'en' ? 'ES' : 'EN';
 }
+
+/* ==========================================
+   SMART HEADER (Ocultar al bajar, mostrar al subir en móvil)
+   ========================================== */
+let lastScrollTop = 0;
+const header = document.querySelector('header');
+
+window.addEventListener('scroll', () => {
+    // Aplicamos este efecto solo en pantallas de celular y tablet
+    if (window.innerWidth <= 900) {
+        let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        
+        // Si bajamos más de 80px (para no activarlo al primer roce)
+        if (scrollTop > lastScrollTop && scrollTop > 80) {
+            // Oculta el header empujándolo hacia arriba según su propia altura
+            header.style.top = `-${header.offsetHeight}px`; 
+        } else {
+            // Si hacemos scroll hacia arriba, vuelve a aparecer
+            header.style.top = "0";
+        }
+        lastScrollTop = scrollTop;
+    } else {
+        // En computadora siempre lo mantenemos a la vista
+        header.style.top = "0";
+    }
+});
