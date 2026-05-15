@@ -118,9 +118,96 @@ footer { background: var(--card-bg); padding: 60px 5% 20px 5%; border-top: 1px s
 .footer-bottom { text-align: center; padding-top: 20px; border-top: 1px solid var(--border-color); color: var(--text-gray); font-size: 0.85rem; }
 
 @media (max-width: 900px) {
-    header { flex-direction: column; padding: 20px; }
-    nav { margin-top: 20px; flex-direction: column; gap: 15px;}
-    nav ul { flex-wrap: wrap; justify-content: center; }
-    .hero { flex-direction: column; text-align: center; padding-top: 40px; }
-    .hero-image { justify-content: center; margin-top: 30px; }
+    header { 
+        flex-direction: column; 
+        padding: 15px; 
+    }
+    .logo { 
+        margin-bottom: 15px; 
+        text-align: center; 
+    }
+    nav { 
+        flex-direction: column; 
+        gap: 15px; 
+        width: 100%; 
+    }
+    nav ul { 
+        flex-wrap: wrap; 
+        justify-content: center; 
+        gap: 15px; 
+    }
+    
+    .hero { 
+        flex-direction: column; 
+        text-align: center; 
+        padding: 40px 5%; 
+        min-height: auto; 
+    }
+    .hero-content { 
+        margin-bottom: 40px; 
+    }
+    .hero-image { 
+        justify-content: center; 
+        margin-top: 0; 
+    }
+    
+    /* Reducimos el padding lateral para ganar espacio */
+    section { 
+        padding: 60px 5%; 
+    } 
+    .service-grid { 
+        gap: 20px; 
+    }
+}
+
+/* --- Para Teléfonos Móviles (hasta 600px) --- */
+@media (max-width: 600px) {
+    /* 1. Ajuste de Tipografía */
+    .hero h1 { 
+        font-size: 2.2rem; /* Reducido de 3.5rem */
+    }
+    .hero-subtitle { 
+        font-size: 1rem; 
+    }
+    .title { 
+        font-size: 1.8rem; /* Reducido de 2.5rem */
+    }
+    
+    /* 2. Ajuste de anchos fijos a fluidos */
+    .grid .small { 
+        width: 100%; /* Toma el ancho del celular */
+        max-width: 350px; /* No crece más de esto en pantallas grandes */
+        height: 200px; 
+    }
+    
+    .service-card { 
+        width: 100%; 
+        max-width: 340px; 
+        padding: 30px 20px; 
+    }
+    
+    /* 3. Botones y Buscador adaptables */
+    .header-actions {
+        flex-direction: column;
+        width: 100%;
+    }
+    .btn-login {
+        width: 100%;
+        text-align: center;
+    }
+    .search-container { 
+        width: 100%; 
+    }
+    .search-container input { 
+        padding: 10px 15px; 
+        font-size: 0.9rem; 
+    }
+    
+    /* 4. Footer apilado */
+    .footer-container { 
+        flex-direction: column; 
+        text-align: center; 
+        align-items: center; 
+        gap: 20px; 
+    }
 }
