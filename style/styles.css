@@ -18,7 +18,18 @@ a { text-decoration: none; }
 ul { list-style: none; }
 
 /* --- HEADER & NAVBAR --- */
-header { display: flex; justify-content: space-between; align-items: center; padding: 20px 5%; background: var(--card-bg); position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 10px rgba(0,0,0,0.05); }
+header { 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    padding: 20px 5%; 
+    background: var(--card-bg); 
+    position: sticky; 
+    top: 0; 
+    z-index: 1000; 
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05); 
+    transition: top 0.3s ease-in-out; 
+}
 .logo h2 { margin-bottom: 0; line-height: 1.1; }
 .logo h2 a { color: var(--primary); font-weight: 800; font-size: 1.6rem; }
 .tagline { font-size: 0.75rem; color: var(--text-gray); font-weight: 500; letter-spacing: 0.5px; }
@@ -131,10 +142,23 @@ footer { background: var(--card-bg); padding: 60px 5% 20px 5%; border-top: 1px s
         gap: 15px; 
         width: 100%; 
     }
-    nav ul { 
-        flex-wrap: wrap; 
-        justify-content: center; 
-        gap: 15px; 
+   nav ul { 
+        flex-wrap: nowrap; /* Fuerza a que se queden en 1 sola línea */
+        justify-content: flex-start; 
+        gap: 20px; 
+        width: 100%;
+        overflow-x: auto; /* Activa el deslizamiento horizontal */
+        padding-bottom: 10px; /* Da un respiro abajo */
+        -webkit-overflow-scrolling: touch; /* Hace que deslice suave en móviles */
+    }
+    
+    /* Ocultar la barrita de scroll para que se vea más estético */
+    nav ul::-webkit-scrollbar {
+        display: none;
+    }
+    nav ul {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
     }
     
     .hero { 
