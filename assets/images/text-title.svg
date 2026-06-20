@@ -1,0 +1,7 @@
+<svg width="830" height="256" viewBox="0 0 830 256" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect x="35" y="38" width="180" height="180" rx="45" fill="white" stroke="#45DDE5" stroke-width="12"/>
+  <path d="M174 110C174 151 132 184 125 184C118 184 76 151 76 110C76 79 107 61 125 86C143 61 174 79 174 110Z" fill="#45DDE5"/>
+  <path d="M77 136H101L112 104L127 161L140 125H177" stroke="white" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="260" y="158" font-family="Inter, Arial, Helvetica, sans-serif" font-size="78" font-weight="800" fill="#45DDE5">CortiSense</text>
+  <rect x="262" y="174" width="208" height="8" rx="4" fill="#45DDE5"/>
+</svg>
