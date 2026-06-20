@@ -43,7 +43,7 @@ http://localhost:5500/terms.html
 Los botones de acceso y selección de planes apuntan actualmente a:
 
 ```text
-https://upc-pre-202610-1asi0730-12053-syncedh.github.io/cortisense-webapp
+https://upc-pre-202610-1asi0730-12053-syncedh.github.io/cortisense-website
 ```
 
 Si la URL final de la Web App cambia, reemplazar esa dirección en los siguientes archivos:
