@@ -26,10 +26,15 @@ https://upc-pre-202610-1asi0730-12053-syncedh.github.io/cortisense-webapp
 
 Si tu Web App final tiene otra URL, reemplaza esa cadena en `index.html` y `terms.html`.
 
+## Links de la Website
+
+```text
+https://cortisense.space
+```
+
 ## Deploy
 
 No se incluye workflow de GitHub Actions de VitalWatch para evitar copiar credenciales o configuración de otro proyecto.
-
 
 ## AV2 visual update
 
