@@ -18,39 +18,12 @@ CortiSense es una solución orientada al monitoreo del bienestar y riesgo clíni
 - Diseño visual basado en una paleta celeste/cian.
 - Contenido enfocado en el monitoreo del personal clínico y la gestión de bienestar médico.
 
-## Probar localmente
 
-Puedes abrir `index.html` directamente en el navegador o ejecutar un servidor local con:
 
-```bash
-python -m http.server 5500
-```
-
-Luego ingresa a:
-
-```text
-http://localhost:5500
-```
-
-Para revisar la página de términos:
-
-```text
-http://localhost:5500/terms.html
-```
-
-## Links de la Web App
-
-Los botones de acceso y selección de planes apuntan actualmente a:
+## Links de la WebSite
 
 ```text
 https://upc-pre-202610-1asi0730-12053-syncedh.github.io/cortisense-website
-```
-
-Si la URL final de la Web App cambia, reemplazar esa dirección en los siguientes archivos:
-
-```text
-index.html
-terms.html
 ```
 
 ## Estructura del proyecto
