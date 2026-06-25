@@ -1,4 +1,4 @@
-name: Azure Static Web Apps CI/CD
+name: Azure Static Web Apps CI/CD (Ambitious Field)
 
 on:
   push:
@@ -15,7 +15,7 @@ jobs:
     runs-on: ubuntu-latest
     name: Build and Deploy Job
     steps:
-      - uses: actions/checkout@v4  # Actualizado a v4 (más rápido y moderno)
+      - uses: actions/checkout@v4
         with:
           submodules: true
           lfs: false
@@ -29,7 +29,7 @@ jobs:
           app_location: "/"
           api_location: ""
           output_location: ""
-          skip_app_build: true     # 👈 AQUÍ ES DONDE VA, para que suba tus HTML/CSS sin compilar
+          skip_app_build: true     # 👈 Correcto para HTML puro
 
   close_pull_request_job:
     if: github.event_name == 'pull_request' && github.event.action == 'closed'
@@ -42,4 +42,4 @@ jobs:
         with:
           azure_static_web_apps_api_token: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN_AMBITIOUS_FIELD_09EE70D10 }}
           action: "close"
-          app_location: "/"          # 👈 Añade esto aquí para que el IDE deje de marcar error
+          app_location: "/"
