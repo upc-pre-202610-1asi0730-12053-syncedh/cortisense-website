@@ -13,6 +13,7 @@ const translationsData = {
             "nav.plans": "Planes",
             "nav.contact": "Contacto",
             "nav.terms": "Términos",
+            "nav.about_team": "Equipo",
             "nav.login": "Acceder",
 
             "hero.badge": "Sistema clínico preventivo",
@@ -228,6 +229,11 @@ const translationsData = {
             "footer.follow": "Síguenos",
             "footer.copy": "&copy; 2026 SyncedHealth. Todos los derechos reservados.",
 
+            "video.badge": "Conoce al equipo",
+            "video.title": "About the Team & Process Retrospective",
+            "video.subtitle": "Descubre al equipo detrás de CortiSense, nuestra metodología de trabajo y la retrospectiva de nuestro proceso de desarrollo.",
+            "video.play": "Reproducir video",
+
             "cta_final.title": "Comienza a cuidar a quienes cuidan",
             "cta_final.subtitle": "Registra tu centro médico, invita a tu equipo y empieza a monitorear el bienestar del personal desde una sola plataforma.",
             "cta_final.register": "Registrar mi centro médico",
@@ -325,6 +331,7 @@ const translationsData = {
             "nav.plans": "Plans",
             "nav.contact": "Contact",
             "nav.terms": "Terms",
+            "nav.about_team": "Team",
             "nav.login": "Login",
 
             "hero.badge": "Preventive Clinical System",
@@ -540,6 +547,11 @@ const translationsData = {
             "footer.follow": "Follow Us",
             "footer.copy": "&copy; 2026 SyncedHealth. All rights reserved.",
 
+            "video.badge": "Meet the team",
+            "video.title": "About the Team & Process Retrospective",
+            "video.subtitle": "Discover the team behind CortiSense, our work methodology, and the retrospective of our development process.",
+            "video.play": "Play video",
+
             "cta_final.title": "Start Caring for Those Who Care",
             "cta_final.subtitle": "Register your medical center, invite your team, and start monitoring staff well-being from a single platform.",
             "cta_final.register": "Register my medical center",
@@ -707,6 +719,53 @@ const translationsData = {
             }
         });
     }
+
+    // ========== Video Player Logic ==========
+    const videoOverlay = document.getElementById('video-overlay');
+    const playBtn = document.getElementById('play-btn');
+    const aboutVideo = document.getElementById('about-team-video');
+
+    if (videoOverlay && playBtn && aboutVideo) {
+        const startVideo = () => {
+            videoOverlay.classList.add('hidden');
+            aboutVideo.play();
+        };
+
+        playBtn.addEventListener('click', startVideo);
+        videoOverlay.addEventListener('click', startVideo);
+
+        aboutVideo.addEventListener('pause', () => {
+            if (!aboutVideo.ended) {
+                videoOverlay.classList.remove('hidden');
+            }
+        });
+
+        aboutVideo.addEventListener('ended', () => {
+            videoOverlay.classList.remove('hidden');
+        });
+
+        aboutVideo.addEventListener('play', () => {
+            videoOverlay.classList.add('hidden');
+        });
+    }
+
+    // ========== Scroll Reveal Animation ==========
+    const revealObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.style.opacity = '1';
+                entry.target.style.transform = 'translateY(0)';
+                revealObserver.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+
+    document.querySelectorAll('.step-card, .feature-card, .role-card, .benefit-block, .plan-summary-card, .video-container').forEach(el => {
+        el.style.opacity = '0';
+        el.style.transform = 'translateY(30px)';
+        el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+        revealObserver.observe(el);
+    });
 
     // Cargar traducción inicial
     changeLanguage(currentLang);

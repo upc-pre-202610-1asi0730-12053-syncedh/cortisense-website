@@ -47,6 +47,7 @@
                     <li><a href="#funcionalidades" class="nav-link" data-i18n="nav.features">Funcionalidades</a></li>
                     <li><a href="#roles" class="nav-link" data-i18n="nav.roles">Roles</a></li>
                     <li><a href="#planes" class="nav-link" data-i18n="nav.plans">Planes</a></li>
+                    <li><a href="#about-team" class="nav-link" data-i18n="nav.about_team">Equipo</a></li>
                     <li><a href="terms.html" class="nav-link" data-i18n="nav.terms">Términos</a></li>
                 </ul>
 
@@ -567,6 +568,39 @@
             </div>
         </section>
 
+        <!-- About The Team Video Section -->
+        <section id="about-team" class="section video-showcase-section">
+            <div class="container">
+                <div class="section-header text-center">
+                    <div class="badge" data-i18n="video.badge">Conoce al equipo</div>
+                    <h2 class="section-title" data-i18n="video.title">About the Team & Process Retrospective</h2>
+                    <p class="section-subtitle" data-i18n="video.subtitle">Descubre al equipo detrás de CortiSense, nuestra metodología de trabajo y la retrospectiva de nuestro proceso de desarrollo.</p>
+                </div>
+                <div class="video-container" id="video-container">
+                    <div class="video-glow"></div>
+                    <div class="video-wrapper">
+                        <video
+                            id="about-team-video"
+                            poster="assets/images/about-the-team-poster.png"
+                            preload="metadata"
+                            controls
+                            playsinline>
+                            <source src="assets/videos/About-The-Team.mp4" type="video/mp4">
+                            Tu navegador no soporta el elemento de video.
+                        </video>
+                        <div class="video-overlay" id="video-overlay">
+                            <button class="play-btn" id="play-btn" aria-label="Reproducir video">
+                                <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M8 5v14l11-7z"/>
+                                </svg>
+                            </button>
+                            <span class="play-label" data-i18n="video.play">Reproducir video</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- Planes Section -->
         <section id="planes" class="section bg-light">
             <div class="container">
@@ -936,6 +970,7 @@
         </footer>
 
         <script src="assets/scripts/main.js"></script>
+    </main>
 </body>
 
 </html>
