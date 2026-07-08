@@ -69,7 +69,14 @@ export const translations = {
     "footer.terms": "Terms and conditions",
     "contact.cta": "Contact us",
     "copyright": "© 2026 CortiSense - All rights reserved",
-    "terms.page.title": "Terms and Conditions of Use"
+    "terms.page.title": "Terms and Conditions of Use",
+    "product_video.badge": "Discover the product",
+    "product_video.title": "About the Product",
+    "product_video.subtitle": "Get to know our value proposition and the main features of CortiSense.",
+    "video.badge": "Meet the team",
+    "video.title": "About the Team & Process Retrospective",
+    "video.subtitle": "Discover the team behind CortiSense, our work methodology and the retrospective of our development process.",
+    "video.play": "Play video"
   },
   es_419: {
     "navbar.home": "Inicio",
@@ -141,7 +148,14 @@ export const translations = {
     "footer.terms": "Términos y condiciones",
     "contact.cta": "Escribenos o llámanos",
     "copyright": "© 2026 CortiSense - Todos los derechos reservados",
-    "terms.page.title": "Términos y Condiciones de Uso"
+    "terms.page.title": "Términos y Condiciones de Uso",
+    "product_video.badge": "Descubre el producto",
+    "product_video.title": "About the Product",
+    "product_video.subtitle": "Conoce nuestra propuesta de valor y las características principales de CortiSense.",
+    "video.badge": "Conoce al equipo",
+    "video.title": "About the Team & Process Retrospective",
+    "video.subtitle": "Descubre al equipo detrás de CortiSense, nuestra metodología de trabajo y la retrospectiva de nuestro proceso de desarrollo.",
+    "video.play": "Reproducir video"
   }
 };
 
